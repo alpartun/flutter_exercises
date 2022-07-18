@@ -9,8 +9,45 @@ class AppBarView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(_title),
-        leading: Icon(Icons.backspace),
+        leading: const Icon(Icons.backspace), // AppBar icerisine icon koyma.
+        backgroundColor: appBarColor(),
+        actions: [
+          Padding(
+              padding: const EdgeInsets.all(10),
+              child: Row(
+                children: [
+                  const Icon(Icons.abc),
+                  IconButton(onPressed: () {}, icon: const Icon(Icons.message))
+                ],
+              )),
+        ],
       ),
+      drawer: Drawer(
+          child: Column(
+        children: [
+          DrawerHeader(
+            decoration: const BoxDecoration(color: Colors.blue),
+            child: Container(
+              alignment: Alignment.center,
+              child: const Text(
+                "Header",
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
+          ),
+          const ListTile(
+            title: Text("1"),
+          ),
+          const ListTile(
+            title: Text("2"),
+          ),
+          const ListTile(
+            title: Text("3"),
+          ),
+        ],
+      )),
     );
   }
+
+  Color appBarColor() => const Color.fromARGB(255, 35, 85, 135);
 }
