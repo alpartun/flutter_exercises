@@ -6,10 +6,12 @@ class AppBarView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context);
+
     return Scaffold(
       appBar: AppBar(
         title: Text(_title),
-        leading: const Icon(Icons.backspace), // AppBar icerisine icon koyma.
+        //leading: const Icon(Icons.backspace), // AppBar icerisine icon koyma.
         backgroundColor: appBarColor(),
         actions: [
           Padding(
@@ -23,29 +25,30 @@ class AppBarView extends StatelessWidget {
         ],
       ),
       drawer: Drawer(
+          width: 175,
           child: Column(
-        children: [
-          DrawerHeader(
-            decoration: const BoxDecoration(color: Colors.blue),
-            child: Container(
-              alignment: Alignment.center,
-              child: const Text(
-                "Header",
-                style: TextStyle(fontSize: 20),
+            children: [
+              DrawerHeader(
+                decoration: const BoxDecoration(color: Colors.blue),
+                child: Container(
+                  alignment: Alignment.center,
+                  child: const Text(
+                    "Header",
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
               ),
-            ),
-          ),
-          const ListTile(
-            title: Text("1"),
-          ),
-          const ListTile(
-            title: Text("2"),
-          ),
-          const ListTile(
-            title: Text("3"),
-          ),
-        ],
-      )),
+              const ListTile(
+                title: Text("1"),
+              ),
+              const ListTile(
+                title: Text("2"),
+              ),
+              const ListTile(
+                title: Text("3"),
+              ),
+            ],
+          )),
     );
   }
 
