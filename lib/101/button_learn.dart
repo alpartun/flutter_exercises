@@ -40,7 +40,7 @@ class ButtonLearn extends StatelessWidget {
           OutlinedButton(
               onPressed: () {},
               style: OutlinedButton.styleFrom(
-                padding: const EdgeInsets.all(10),
+                padding: const EdgeInsets.all(11),
                 shape: const RoundedRectangleBorder(),
                 backgroundColor: Colors.deepPurpleAccent,
                 primary: Colors.black,
