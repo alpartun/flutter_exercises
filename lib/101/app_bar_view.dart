@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 
 class AppBarView extends StatelessWidget {
   const AppBarView({Key? key}) : super(key: key);
-  final String _title = "Flutter Exercieses";
+  final String _title = "Flutter Exercises";
 
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context);
+    var deneme = "asd";
 
     return Scaffold(
       appBar: AppBar(
