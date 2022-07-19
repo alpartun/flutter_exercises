@@ -3,7 +3,9 @@ import 'package:flutter_learn/101/app_bar_view.dart';
 import 'package:flutter_learn/101/button_learn.dart';
 import 'package:flutter_learn/101/container_learn_view.dart';
 import 'package:flutter_learn/101/koyde_deneme.dart';
+import 'package:flutter_learn/101/padding_learn_view.dart';
 import 'package:flutter_learn/101/statefulWidgetLearn.dart';
+import 'package:flutter_learn/101/stateless_widget_learn.dart';
 import 'package:flutter_learn/101/text_learn_view.dart';
 
 void main() => runApp(MyApp());
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
             //scaffoldBackgroundColor: Colors.red,
             //iconTheme: IconThemeData(color: Colors.red)
             ),
-        home: const AppBarView()
+        home: const PaddingLearnView()
 
         // Scaffold(
         //   appBar: AppBar(title: const Text("Flutter Exercises")),

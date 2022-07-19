@@ -8,13 +8,33 @@ class StatelessWidgetLearn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+      ),
       body: Column(
         children: const [
           TextWidget(title: "alp"),
           TextWidget(title: "artun"),
-          TextWidget(title: "guvendiren")
+          TextWidget(title: "guvendiren"),
+          StatlessWidgetContainer()
         ],
       ),
+    );
+  }
+}
+
+class StatlessWidgetContainer extends StatelessWidget {
+  //_StatelessWidgetContainer -> private(only accessed from this class to this method)
+  const StatlessWidgetContainer({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+          color: Colors.red, borderRadius: BorderRadius.circular(30)),
     );
   }
 }
