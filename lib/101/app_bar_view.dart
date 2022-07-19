@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class AppBarView extends StatelessWidget {
   const AppBarView({Key? key}) : super(key: key);
@@ -11,18 +12,27 @@ class AppBarView extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        iconTheme: IconThemeData(), //iconlarin colorunu ver,
         title: Text(_title),
         //leading: const Icon(Icons.backspace), // AppBar icerisine icon koyma.
-        backgroundColor: appBarColor(),
+        backgroundColor:
+            appBarColor(), // transparent kullanilirsa appbar ve body bir gibi gorunur
+        elevation: 0,
+        systemOverlayStyle: SystemUiOverlayStyle
+            .light, // ustteki saat wifi pil siyah ya da beyaz theme e gore ayarlama
         actions: [
+          // Sag tarafi kullanmaya imkan saglar
           Padding(
-              padding: const EdgeInsets.all(10),
-              child: Row(
-                children: [
-                  const Icon(Icons.abc),
-                  IconButton(onPressed: () {}, icon: const Icon(Icons.message))
-                ],
-              )),
+            padding: const EdgeInsets.all(10),
+            child: Row(
+              children: [
+                IconButton(onPressed: () {}, icon: const Icon(Icons.message))
+              ],
+            ),
+          ),
+          const Center(
+            child: CircularProgressIndicator(),
+          )
         ],
       ),
       drawer: Drawer(
