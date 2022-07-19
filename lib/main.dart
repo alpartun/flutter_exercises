@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learn/101/app_bar_view.dart';
 import 'package:flutter_learn/101/button_learn.dart';
+import 'package:flutter_learn/101/card_learn_view.dart';
 import 'package:flutter_learn/101/container_learn_view.dart';
 import 'package:flutter_learn/101/koyde_deneme.dart';
 import 'package:flutter_learn/101/padding_learn_view.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
             //scaffoldBackgroundColor: Colors.red,
             //iconTheme: IconThemeData(color: Colors.red)
             ),
-        home: const PaddingLearnView()
+        home: const CardLEarnView()
 
         // Scaffold(
         //   appBar: AppBar(title: const Text("Flutter Exercises")),
