@@ -118,3 +118,5 @@ class _CustomCard extends StatelessWidget {
         child: child);
   }
 }
+
+// Shape Borders :  StadiumBorder(), CircleBorder(), 
